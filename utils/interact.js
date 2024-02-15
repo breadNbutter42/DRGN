@@ -384,7 +384,7 @@ export const isPresaleState = async () => { try{
   const publicSaleStartTime = await nftContractProxy.publicSaleStartTime.call();
   const presaleSaleStartTime = await nftContractProxy.allowlistStartTime.call();
   const currentTime = Math.ceil(Date.now() / 1000); // Current time in seconds
-  const isPresale = currentTime < publicSaleStartTime && currentTime >= presaleSaleStartTime;
+  const isPresale = true;
   return isPresale;
 }catch (error) {
   console.error('Error with isPresaleState interact.js[]', error);
